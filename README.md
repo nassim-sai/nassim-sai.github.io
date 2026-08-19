@@ -43,23 +43,3 @@ Useful for pasting into emails and applications:
 | Europe (FR) | `/cv/Nassim_Sai_CV_EU_FR.pdf` |
 | GCC (EN) | `/cv/Nassim_Sai_CV_Gulf_EN.pdf` |
 | GCC (AR) | `/cv/Nassim_Sai_CV_Gulf_AR.pdf` |
-
-The two-page `_V1` versions are also in `cv/` for when someone asks for depth.
-
-## Updating a CV
-
-The PDFs are embedded inside `index.html`, so replacing a file in `cv/` alone
-is not enough — the viewer would still serve the old version. To update one:
-
-1. Rebuild the PDF from the LaTeX sources in `Resume-Latex/overleaf/Resume_7`.
-2. Copy it into `cv/`.
-3. Re-embed it in `index.html` (search for `var PDFS =` — each entry is
-   `{"n": "<filename>", "b": "<base64 of the file>"}`).
-
-Step 3 is the fiddly one; easiest is to ask Claude to redo the embed.
-
-## Source
-
-The site's content comes from `Nassim_Sai_Profile.md` and `CV-Set-2026.md`.
-Keep those as the source of truth and regenerate rather than editing the
-HTML by hand where possible.
