@@ -210,9 +210,9 @@
   .cvactions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;align-items:center}
   .cvframe{position:relative;width:100%;height:min(78vh,860px);border:1px solid var(--line);
     border-radius:var(--r);overflow:hidden;background:var(--bg-2)}
-  .cvframe object,.cvframe iframe{width:100%;height:100%;border:0;display:block}
+  .cvframe object,.cvframe iframe{width:100%;height:100%;border:0;display:block;position:relative;z-index:2}
   @media(max-width:700px){.cvframe{height:auto;min-height:130px}.cvframe iframe{display:none}}
-  .cvfallback{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:12px;padding:28px;color:var(--muted);font-size:14.5px}
+  .cvfallback{position:absolute;inset:0;z-index:1;pointer-events:none;display:grid;place-content:center;text-align:center;gap:12px;padding:28px;color:var(--muted);font-size:14.5px}
 
   /* contact */
   .cbox{border:1px solid var(--line);border-radius:10px;padding:15px 17px;background:var(--card);transition:.22s}
@@ -821,7 +821,14 @@ function sync(){
   if(url) URL.revokeObjectURL(url);
   var blob = b2blob(rec.b);
   url = URL.createObjectURL(blob);
-  obj.setAttribute('src', url + '#view=FitH&toolbar=1');
+  var HASH = '#view=FitH&toolbar=1&navpanes=0';
+  obj.setAttribute('src', url + HASH);
+  if(location.protocol === 'http:' || location.protocol === 'https:'){
+    var direct = 'cv/' + rec.n, want = rec.n;
+    fetch(direct, {method:'HEAD'}).then(function(r){
+      if(r.ok && window.__cv && window.__cv.name === want) obj.setAttribute('src', direct + HASH);
+    }).catch(function(){});
+  }
 
   window.__cv = {url:url, name:rec.n};
 }
