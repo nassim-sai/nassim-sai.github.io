@@ -183,6 +183,17 @@
   .skillcard h3 i{width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block}
 
   /* certs */
+  .badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-bottom:34px}
+  .badge{display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;
+    border:1px solid var(--line-2);border-radius:12px;padding:16px 11px;background:var(--card);
+    transition:transform .22s,border-color .22s,box-shadow .22s;color:inherit}
+  .badge:hover{transform:translateY(-3px);text-decoration:none;
+    border-color:color-mix(in srgb,var(--accent) 42%,var(--line));
+    box-shadow:0 12px 30px -20px var(--accent)}
+  .badge img{width:94px;height:94px;object-fit:contain;display:block}
+  .badge .bn{font-size:12.6px;font-weight:600;line-height:1.35;color:var(--text)}
+  .badge .bi{font-family:var(--mono);font-size:10.2px;color:var(--muted);line-height:1.4}
+  @media(max-width:520px){.badges{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}.badge img{width:80px;height:80px}}
   .cert{border:1px solid var(--line);border-radius:10px;padding:15px 17px;background:var(--card);transition:.22s}
   .cert:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
   .cert .cn{font-weight:650;font-size:14.8px;margin-bottom:3px}
@@ -487,11 +498,36 @@
 <section id="certifications">
   <div class="wrap">
     <p class="kicker rv" data-i="k.certs">Certifications &amp; training</p>
-    <h2 class="title rv" data-i="t.certs">Verified badges on Credly.</h2>
+    <h2 class="title rv" data-i="t.certs">Six credentials earned this month — Fortinet NSE 1–3 and the Cisco networking track.</h2>
+    <div class="badges">
+      <div class="badge rv">
+        <img src="assets/badges/fortinet-nse-3.webp" alt="NSE 3 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
+        <span class="bn">NSE 3 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
+      </div>
+      <div class="badge rv">
+        <img src="assets/badges/fortinet-nse-2.webp" alt="NSE 2 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
+        <span class="bn">NSE 2 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
+      </div>
+      <div class="badge rv">
+        <img src="assets/badges/fortinet-nse-1.webp" alt="NSE 1 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
+        <span class="bn">NSE 1 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
+      </div>
+      <a class="badge rv" href="https://www.credly.com/users/nassim-sai/badges" target="_blank" rel="noopener">
+        <img src="assets/badges/cisco-networking-devices.webp" alt="Networking Devices and Initial Configuration badge" width="94" height="94" loading="lazy">
+        <span class="bn">Networking Devices &amp; Initial Configuration</span><span class="bi">Cisco NetAcad · Aug 2026</span>
+      </a>
+      <a class="badge rv" href="https://www.credly.com/users/nassim-sai/badges" target="_blank" rel="noopener">
+        <img src="assets/badges/cisco-networking-basics.webp" alt="Networking Basics badge" width="94" height="94" loading="lazy">
+        <span class="bn">Networking Basics</span><span class="bi">Cisco NetAcad · Aug 2026</span>
+      </a>
+      <a class="badge rv" href="https://www.credly.com/users/nassim-sai/badges" target="_blank" rel="noopener">
+        <img src="assets/badges/cisco-intro-cybersecurity.webp" alt="Introduction to Cybersecurity badge" width="94" height="94" loading="lazy">
+        <span class="bn">Introduction to Cybersecurity</span><span class="bi">Cisco NetAcad · Aug 2026</span>
+      </a>
+    </div>
+
+    <p class="kicker rv" data-i="k.next">In progress and planned</p>
     <div class="grid3">
-      <div class="cert rv"><span class="pill done" data-i="pill.done">Earned · Aug 2026</span><div class="cn">Networking Devices and Initial Configuration</div><div class="ci">Cisco Networking Academy</div></div>
-      <div class="cert rv"><span class="pill done" data-i="pill.done">Earned · Aug 2026</span><div class="cn">Networking Basics</div><div class="ci">Cisco Networking Academy</div></div>
-      <div class="cert rv"><span class="pill done" data-i="pill.done">Earned · Aug 2026</span><div class="cn">Introduction to Cybersecurity</div><div class="ci">Cisco Networking Academy</div></div>
       <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">CCNA</div><div class="ci" data-i="c.ccna">Cisco · current focus</div></div>
       <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">Cisco CyberOps Associate</div><div class="ci" data-i="c.cyops">Junior Cybersecurity Analyst path</div></div>
       <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">SC-900 · SC-200 · SC-300 · SC-500</div><div class="ci" data-i="c.sc">Microsoft Security, Compliance &amp; Identity</div></div>
@@ -595,8 +631,8 @@ var FR = {
 "ed2.desc":"Bases en électronique, systèmes embarqués et automatisme — le socle des travaux ultérieurs en matériel et IoT.",
 "k.skills":"Compétences techniques","t.skills":"Ce que j'utilise au quotidien.",
 "s1":"Sécurité & architecture réseau","s2":"Opérations de sécurité & détection","s3":"Cloud natif & conteneurs","s4":"Programmation & données","s5":"Systèmes","s6":"Gouvernance & outils",
-"k.certs":"Certifications & formations","t.certs":"Badges vérifiés sur Credly.",
-"pill.done":"Obtenu · Août 2026","pill.prog":"En cours","pill.next":"Prévu",
+"k.certs":"Certifications & formations","t.certs":"Six certifications obtenues ce mois-ci — Fortinet NSE 1–3 et le parcours réseau Cisco.","k.next":"En cours et prévu",
+"pill.prog":"En cours","pill.next":"Prévu",
 "c.ccna":"Cisco · priorité actuelle","c.cyops":"Parcours Junior Cybersecurity Analyst","c.sc":"Microsoft Sécurité, Conformité & Identité","c.rh":"Red Hat · administration Linux","c.iso":"Management de la sécurité de l'information",
 "community":"Communauté : <b style=\"color:var(--text)\">Securinets TEK-UP</b> — membre actif depuis 2024. Anciennement IEEE ISIMM et CPU Club ISIMM.",
 "k.contact":"Contact","t.contact":"À la recherche d'un poste d'Ingénieur Réseaux & Sécurité — en Tunisie ou à distance.",
@@ -662,8 +698,8 @@ var AR = {
 "ed2.desc":"أساس في الإلكترونيات والأنظمة المدمجة والأتمتة — القاعدة التي بُنيت عليها أعمال العتاد وإنترنت الأشياء لاحقًا.",
 "k.skills":"المهارات التقنية","t.skills":"ما أعتمد عليه.",
 "s1":"أمن الشبكات والبنية","s2":"عمليات الأمن والكشف","s3":"السحابة الأصلية والحاويات","s4":"البرمجة والبيانات","s5":"الأنظمة","s6":"الحوكمة والأدوات",
-"k.certs":"الشهادات والتكوين","t.certs":"شارات موثّقة على Credly.",
-"pill.done":"مُحصَّلة · أوت 2026","pill.prog":"قيد الإنجاز","pill.next":"مخطّطة",
+"k.certs":"الشهادات والتكوين","t.certs":"ست شهادات حُصّلت هذا الشهر — Fortinet NSE 1–3 ومسار الشبكات من Cisco.","k.next":"قيد الإنجاز ومخطَّط",
+"pill.prog":"قيد الإنجاز","pill.next":"مخطّطة",
 "c.ccna":"Cisco · الأولوية الحالية","c.cyops":"مسار Junior Cybersecurity Analyst","c.sc":"مايكروسوفت — الأمن والامتثال والهوية","c.rh":"Red Hat · إدارة أنظمة لينكس","c.iso":"إدارة أمن المعلومات",
 "community":"المجتمع: <b style=\"color:var(--text)\">Securinets TEK-UP</b> — عضو نشط منذ 2024. وسابقًا IEEE ISIMM و CPU Club ISIMM.",
 "k.contact":"التواصل","t.contact":"أبحث عن منصب مهندس شبكات وأمن — داخل تونس أو عن بُعد.",
