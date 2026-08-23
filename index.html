@@ -193,6 +193,11 @@
   .badge img{width:94px;height:94px;object-fit:contain;display:block}
   .badge .bn{font-size:12.6px;font-weight:600;line-height:1.35;color:var(--text)}
   .badge .bi{font-family:var(--mono);font-size:10.2px;color:var(--muted);line-height:1.4}
+  .badge::after{content:"Verify \2197";font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
+    color:var(--accent);opacity:0;transition:opacity .2s}
+  .badge:hover::after,.badge:focus-visible::after{opacity:1}
+  html[lang="fr"] .badge::after{content:"V\E9rifier \2197"}
+  html[lang="ar"] .badge::after{content:"\62A\62D\642\651\642 \2197"}
   @media(max-width:520px){.badges{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}.badge img{width:80px;height:80px}}
   .cert{border:1px solid var(--line);border-radius:10px;padding:15px 17px;background:var(--card);transition:.22s}
   .cert:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
@@ -500,27 +505,33 @@
     <p class="kicker rv" data-i="k.certs">Certifications &amp; training</p>
     <h2 class="title rv" data-i="t.certs">Six credentials earned this month — Fortinet NSE 1–3 and the Cisco networking track.</h2>
     <div class="badges">
-      <div class="badge rv">
+      <a class="badge rv" href="https://www.credly.com/badges/c99eec57-254c-4f97-b1af-7c7966c9c83d/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="NSE 3 Certified in Cybersecurity — verify on Credly">
         <img src="assets/badges/fortinet-nse-3.webp" alt="NSE 3 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">NSE 3 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
-      </div>
-      <div class="badge rv">
+      </a>
+      <a class="badge rv" href="https://www.credly.com/badges/874235eb-3967-4b94-b0c7-38fa05a08177/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="NSE 2 Certified in Cybersecurity — verify on Credly">
         <img src="assets/badges/fortinet-nse-2.webp" alt="NSE 2 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">NSE 2 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
-      </div>
-      <div class="badge rv">
+      </a>
+      <a class="badge rv" href="https://www.credly.com/badges/b790729c-2ac0-43f6-bf33-8d1c45c0d801/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="NSE 1 Certified in Cybersecurity — verify on Credly">
         <img src="assets/badges/fortinet-nse-1.webp" alt="NSE 1 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">NSE 1 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
-      </div>
-      <a class="badge rv" href="https://www.credly.com/users/nassim-sai/badges" target="_blank" rel="noopener">
+      </a>
+      <a class="badge rv" href="https://www.credly.com/badges/52242a90-a480-4c0e-b713-5e92b7023a3c/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="Networking Devices and Initial Configuration — verify on Credly">
         <img src="assets/badges/cisco-networking-devices.webp" alt="Networking Devices and Initial Configuration badge" width="94" height="94" loading="lazy">
         <span class="bn">Networking Devices &amp; Initial Configuration</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
-      <a class="badge rv" href="https://www.credly.com/users/nassim-sai/badges" target="_blank" rel="noopener">
+      <a class="badge rv" href="https://www.credly.com/badges/db935b82-0152-480b-aae5-45f582a42b12/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="Networking Basics — verify on Credly">
         <img src="assets/badges/cisco-networking-basics.webp" alt="Networking Basics badge" width="94" height="94" loading="lazy">
         <span class="bn">Networking Basics</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
-      <a class="badge rv" href="https://www.credly.com/users/nassim-sai/badges" target="_blank" rel="noopener">
+      <a class="badge rv" href="https://www.credly.com/badges/5922c5ae-3003-4563-9c46-7e1afc15a4c9/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="Introduction to Cybersecurity — verify on Credly">
         <img src="assets/badges/cisco-intro-cybersecurity.webp" alt="Introduction to Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">Introduction to Cybersecurity</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
