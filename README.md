@@ -34,7 +34,7 @@ double-clicking and everything works, including the CV viewer.
 ## Direct CV links
 
 Useful for pasting into emails and applications:
-
+ 
 | Market | Link |
 |---|---|
 | Tunisia (EN) | `/cv/Nassim_Sai_CV_TN_EN.pdf` |
@@ -43,3 +43,6 @@ Useful for pasting into emails and applications:
 | Europe (FR) | `/cv/Nassim_Sai_CV_EU_FR.pdf` |
 | GCC (EN) | `/cv/Nassim_Sai_CV_Gulf_EN.pdf` |
 | GCC (AR) | `/cv/Nassim_Sai_CV_Gulf_AR.pdf` |
+| Canada (EN) | `/cv/Nassim_Sai_Resume_CA.pdf` |
+| USA (EN) | `/cv/Nassim_Sai_Resume_US.pdf` |
+ 
