@@ -183,6 +183,31 @@
   .skillcard h3 i{width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block}
 
   /* certs */
+  .certgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-bottom:34px}
+  .certtile{display:block;border:1px solid var(--line-2);border-radius:10px;overflow:hidden;
+    background:var(--card);cursor:zoom-in;padding:0;text-align:left;color:inherit;
+    transition:transform .22s,border-color .22s,box-shadow .22s}
+  .certtile:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 42%,var(--line));
+    box-shadow:0 12px 30px -20px var(--accent)}
+  .certtile img{width:100%;aspect-ratio:11/8;object-fit:cover;object-position:top;display:block;
+    border-bottom:1px solid var(--line-2)}
+  .certtile .cx{padding:10px 12px 12px}
+  .certtile .cn2{font-size:12.6px;font-weight:600;line-height:1.35;color:var(--text)}
+  .certtile .ci2{font-family:var(--mono);font-size:10.2px;color:var(--muted);margin-top:3px}
+  html[dir="rtl"] .certtile{text-align:right}
+  .certbox{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;
+    padding:28px;background:rgba(6,9,13,.82);backdrop-filter:blur(3px)}
+  .certbox.on{display:flex}
+  .certbox .cbwrap{max-width:min(92vw,980px);max-height:88vh;display:flex;flex-direction:column;gap:12px}
+  .certbox img{max-width:100%;max-height:74vh;object-fit:contain;border-radius:10px;
+    border:1px solid var(--line-2);background:#fff;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+  .certbox .cbcap{color:var(--text-2);font-size:13.5px;text-align:center}
+  .certbox .cbcap b{color:var(--text)}
+  .certbox .cbclose{position:absolute;top:20px;right:24px;width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--line-2);background:var(--card);color:var(--text);font-size:20px;line-height:1;
+    cursor:pointer;display:flex;align-items:center;justify-content:center}
+  html[dir="rtl"] .certbox .cbclose{right:auto;left:24px}
+  @media(max-width:640px){.certgrid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
   .badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-bottom:34px}
   .badge{display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;
     border:1px solid var(--line-2);border-radius:12px;padding:16px 11px;background:var(--card);
@@ -544,11 +569,64 @@
       </a>
     </div>
 
+    <p class="kicker rv" data-i="k.fullcerts">Full certificates</p>
+    <div class="certgrid">
+      <button type="button" class="certtile rv" data-full="assets/certs/fortinet-nse-3.webp" data-name="NSE 3 Certified in Cybersecurity" data-issuer="Fortinet · Aug 2026">
+        <img src="assets/certs/fortinet-nse-3.webp" alt="NSE 3 Certified in Cybersecurity certificate" loading="lazy">
+        <div class="cx"><div class="cn2">NSE 3 Certified in Cybersecurity</div><div class="ci2">Fortinet · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/fortinet-nse-2.webp" data-name="NSE 2 Certified in Cybersecurity" data-issuer="Fortinet · Aug 2026">
+        <img src="assets/certs/fortinet-nse-2.webp" alt="NSE 2 Certified in Cybersecurity certificate" loading="lazy">
+        <div class="cx"><div class="cn2">NSE 2 Certified in Cybersecurity</div><div class="ci2">Fortinet · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/fortinet-nse-1.webp" data-name="NSE 1 Certified in Cybersecurity" data-issuer="Fortinet · Aug 2026">
+        <img src="assets/certs/fortinet-nse-1.webp" alt="NSE 1 Certified in Cybersecurity certificate" loading="lazy">
+        <div class="cx"><div class="cn2">NSE 1 Certified in Cybersecurity</div><div class="ci2">Fortinet · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/cisco-networking-devices.webp" data-name="Networking Devices & Initial Configuration" data-issuer="Cisco NetAcad · Aug 2026">
+        <img src="assets/certs/cisco-networking-devices.webp" alt="Networking Devices & Initial Configuration certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Networking Devices & Initial Configuration</div><div class="ci2">Cisco NetAcad · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/cisco-networking-basics.webp" data-name="Networking Basics" data-issuer="Cisco NetAcad · Aug 2026">
+        <img src="assets/certs/cisco-networking-basics.webp" alt="Networking Basics certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Networking Basics</div><div class="ci2">Cisco NetAcad · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/cisco-intro-cybersecurity.webp" data-name="Introduction to Cybersecurity" data-issuer="Cisco NetAcad · Aug 2026">
+        <img src="assets/certs/cisco-intro-cybersecurity.webp" alt="Introduction to Cybersecurity certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Introduction to Cybersecurity</div><div class="ci2">Cisco NetAcad · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/cisco-endpoint-security.webp" data-name="Endpoint Security" data-issuer="Cisco NetAcad · Aug 2026">
+        <img src="assets/certs/cisco-endpoint-security.webp" alt="Endpoint Security certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Endpoint Security</div><div class="ci2">Cisco NetAcad · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/llm-security-cllmsp.webp" data-name="Certified LLM Security Professional (CLLMSP)" data-issuer="Red Team Leaders · exam-verified · Aug 2026">
+        <img src="assets/certs/llm-security-cllmsp.webp" alt="Certified LLM Security Professional (CLLMSP) certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Certified LLM Security Professional (CLLMSP)</div><div class="ci2">Red Team Leaders · exam-verified · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/aws-prompt-engineering.webp" data-name="Foundations of Prompt Engineering" data-issuer="AWS Training &amp; Certification · Aug 2026">
+        <img src="assets/certs/aws-prompt-engineering.webp" alt="Foundations of Prompt Engineering certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Foundations of Prompt Engineering</div><div class="ci2">AWS Training &amp; Certification · Aug 2026</div></div>
+      </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/paloalto-cortex-cloud.webp" data-name="Cortex Cloud — Cloud Security Professional" data-issuer="Palo Alto Networks · 4 modules, 5h · Aug 2026">
+        <img src="assets/certs/paloalto-cortex-cloud.webp" alt="Cortex Cloud — Cloud Security Professional certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Cortex Cloud — Cloud Security Professional</div><div class="ci2">Palo Alto Networks · 4 modules, 5h · Aug 2026</div></div>
+      </button>
+    </div>
+
+    <div class="certbox" id="certBox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+      <button type="button" class="cbclose" id="certClose" aria-label="Close">&times;</button>
+      <div class="cbwrap">
+        <img id="certImg" src="" alt="">
+        <div class="cbcap"><b id="certCapName"></b> — <span id="certCapIssuer"></span></div>
+      </div>
+    </div>
+
     <p class="kicker rv" data-i="k.next">In progress and planned</p>
     <div class="grid3">
       <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">CCNA</div><div class="ci" data-i="c.ccna">Cisco · current focus</div></div>
       <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">Cisco CyberOps Associate</div><div class="ci" data-i="c.cyops">Junior Cybersecurity Analyst path</div></div>
-      <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">SC-900 · SC-200 · SC-300 · SC-500</div><div class="ci" data-i="c.sc">Microsoft Security, Compliance &amp; Identity</div></div>
+      <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">SC-900</div><div class="ci" data-i="c.sc900">Microsoft Security, Compliance &amp; Identity Fundamentals — 5 Microsoft Learn modules done</div></div>
+      <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">SC-200 · SC-300 · SC-500</div><div class="ci" data-i="c.sc">Microsoft Security, Compliance &amp; Identity</div></div>
       <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">RHCSA / RHCE</div><div class="ci" data-i="c.rh">Red Hat · Linux administration</div></div>
       <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">ISO/IEC 27001 Foundation</div><div class="ci" data-i="c.iso">Information Security Management</div></div>
     </div>
@@ -649,9 +727,9 @@ var FR = {
 "ed2.desc":"Bases en électronique, systèmes embarqués et automatisme — le socle des travaux ultérieurs en matériel et IoT.",
 "k.skills":"Compétences techniques","t.skills":"Ce que j'utilise au quotidien.",
 "s1":"Sécurité & architecture réseau","s2":"Opérations de sécurité & détection","s3":"Cloud natif & conteneurs","s4":"Programmation & données","s5":"Systèmes","s6":"Gouvernance & outils",
-"k.certs":"Certifications & formations","t.certs":"Sept certifications obtenues ce mois-ci — Fortinet NSE 1–3 et le parcours réseau Cisco.","k.next":"En cours et prévu",
+"k.certs":"Certifications & formations","k.fullcerts":"Certificats complets","t.certs":"Sept certifications obtenues ce mois-ci — Fortinet NSE 1–3 et le parcours réseau Cisco.","k.next":"En cours et prévu",
 "pill.prog":"En cours","pill.next":"Prévu",
-"c.ccna":"Cisco · priorité actuelle","c.cyops":"Parcours Junior Cybersecurity Analyst","c.sc":"Microsoft Sécurité, Conformité & Identité","c.rh":"Red Hat · administration Linux","c.iso":"Management de la sécurité de l'information",
+"c.ccna":"Cisco · priorité actuelle","c.cyops":"Parcours Junior Cybersecurity Analyst","c.sc900":"Bases Microsoft Sécurité, Conformité & Identité — 5 modules Microsoft Learn terminés","c.sc":"Microsoft Sécurité, Conformité & Identité","c.rh":"Red Hat · administration Linux","c.iso":"Management de la sécurité de l'information",
 "community":"Communauté : <b style=\"color:var(--text)\">Securinets TEK-UP</b> — membre actif depuis 2024. Anciennement IEEE ISIMM et CPU Club ISIMM.",
 "k.contact":"Contact","t.contact":"À la recherche d'un poste d'Ingénieur Réseaux & Sécurité — en Tunisie ou à distance.",
 "l.email":"E-mail","l.phone":"Téléphone","l.credly":"Badges vérifiés",
@@ -716,9 +794,9 @@ var AR = {
 "ed2.desc":"أساس في الإلكترونيات والأنظمة المدمجة والأتمتة — القاعدة التي بُنيت عليها أعمال العتاد وإنترنت الأشياء لاحقًا.",
 "k.skills":"المهارات التقنية","t.skills":"ما أعتمد عليه.",
 "s1":"أمن الشبكات والبنية","s2":"عمليات الأمن والكشف","s3":"السحابة الأصلية والحاويات","s4":"البرمجة والبيانات","s5":"الأنظمة","s6":"الحوكمة والأدوات",
-"k.certs":"الشهادات والتكوين","t.certs":"سبع شهادات حُصّلت هذا الشهر — Fortinet NSE 1–3 ومسار الشبكات من Cisco.","k.next":"قيد الإنجاز ومخطَّط",
+"k.certs":"الشهادات والتكوين","k.fullcerts":"الشهادات كاملةً","t.certs":"سبع شهادات حُصّلت هذا الشهر — Fortinet NSE 1–3 ومسار الشبكات من Cisco.","k.next":"قيد الإنجاز ومخطَّط",
 "pill.prog":"قيد الإنجاز","pill.next":"مخطّطة",
-"c.ccna":"Cisco · الأولوية الحالية","c.cyops":"مسار Junior Cybersecurity Analyst","c.sc":"مايكروسوفت — الأمن والامتثال والهوية","c.rh":"Red Hat · إدارة أنظمة لينكس","c.iso":"إدارة أمن المعلومات",
+"c.ccna":"Cisco · الأولوية الحالية","c.cyops":"مسار Junior Cybersecurity Analyst","c.sc900":"أساسيات مايكروسوفت للأمن والامتثال والهوية — 5 وحدات من Microsoft Learn منجزة","c.sc":"مايكروسوفت — الأمن والامتثال والهوية","c.rh":"Red Hat · إدارة أنظمة لينكس","c.iso":"إدارة أمن المعلومات",
 "community":"المجتمع: <b style=\"color:var(--text)\">Securinets TEK-UP</b> — عضو نشط منذ 2024. وسابقًا IEEE ISIMM و CPU Club ISIMM.",
 "k.contact":"التواصل","t.contact":"أبحث عن منصب مهندس شبكات وأمن — داخل تونس أو عن بُعد.",
 "l.email":"البريد الإلكتروني","l.phone":"الهاتف","l.credly":"الشارات الموثّقة",
@@ -994,7 +1072,36 @@ window.addEventListener('resize', function(){
 
 sync();
 })();
-</script>
 
-</body>
-</html>
+(function(){
+"use strict";
+var box = document.getElementById('certBox');
+if(!box) return;
+var img = document.getElementById('certImg');
+var capN = document.getElementById('certCapName');
+var capI = document.getElementById('certCapIssuer');
+var lastFocus = null;
+function open(tile){
+  img.src = tile.getAttribute('data-full');
+  img.alt = tile.getAttribute('data-name') + ' certificate';
+  capN.textContent = tile.getAttribute('data-name');
+  capI.textContent = tile.getAttribute('data-issuer');
+  box.classList.add('on');
+  lastFocus = document.activeElement;
+  document.getElementById('certClose').focus();
+  document.body.style.overflow = 'hidden';
+}
+function close(){
+  box.classList.remove('on');
+  img.src = '';
+  document.body.style.overflow = '';
+  if(lastFocus) lastFocus.focus();
+}
+document.querySelectorAll('.certtile').forEach(function(t){
+  t.addEventListener('click', function(){ open(t); });
+});
+document.getElementById('certClose').addEventListener('click', close);
+box.addEventListener('click', function(e){ if(e.target === box) close(); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && box.classList.contains('on')) close(); });
+})();
+</script>
