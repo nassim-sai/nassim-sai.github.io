@@ -183,6 +183,13 @@
   .skillcard h3 i{width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block}
 
   /* certs */
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(16px);
+    background:var(--card);border:1px solid var(--line-2);color:var(--text);
+    font-family:var(--mono);font-size:13px;padding:11px 18px;border-radius:10px;
+    box-shadow:0 16px 40px -18px rgba(0,0,0,.55);opacity:0;pointer-events:none;
+    transition:opacity .22s,transform .22s;z-index:90;max-width:min(88vw,380px);text-align:center}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast b{color:var(--accent)}
   .certgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-bottom:34px}
   .certtile{display:block;border:1px solid var(--line-2);border-radius:10px;overflow:hidden;
     background:var(--card);cursor:zoom-in;padding:0;text-align:left;color:inherit;
@@ -613,7 +620,8 @@
       </button>
     </div>
 
-    <div class="certbox" id="certBox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="certbox" id="certBox" role="dialog" aria-modal="true" aria-label="Certificate preview">
       <button type="button" class="cbclose" id="certClose" aria-label="Close">&times;</button>
       <div class="cbwrap">
         <img id="certImg" src="" alt="">
@@ -1103,5 +1111,34 @@ document.querySelectorAll('.certtile').forEach(function(t){
 document.getElementById('certClose').addEventListener('click', close);
 box.addEventListener('click', function(e){ if(e.target === box) close(); });
 document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && box.classList.contains('on')) close(); });
+})();
+
+(function(){
+"use strict";
+var toast = document.getElementById('toast');
+if(!toast) return;
+var MSG = {
+  en: function(addr){ return 'Copied to clipboard: <b>' + addr + '</b>'; },
+  fr: function(addr){ return 'Copié dans le presse-papiers : <b>' + addr + '</b>'; },
+  ar: function(addr){ return 'تم نسخ العنوان: <b>' + addr + '</b>'; }
+};
+var hideT;
+function show(addr){
+  var curLang = document.documentElement.lang || 'en';
+  var m = MSG[curLang] || MSG.en;
+  toast.innerHTML = m(addr);
+  toast.classList.add('on');
+  clearTimeout(hideT);
+  hideT = setTimeout(function(){ toast.classList.remove('on'); }, 3200);
+}
+document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+  a.addEventListener('click', function(){
+    var addr = a.getAttribute('href').replace(/^mailto:/, '').split('?')[0];
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(addr).then(function(){ show(addr); }).catch(function(){});
+    }
+    // mailto: navigation still proceeds normally for visitors who do have a mail client
+  });
+});
 })();
 </script>
