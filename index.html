@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nassim Sai — Network &amp; Security Engineer</title>
+<title>Nassim Sai · Network &amp; Security Engineer</title>
 <meta name="description" content="Network &amp; Security Engineer specialising in Kubernetes/OpenShift security observability, SOC build-out and secure network architecture.">
 <link rel="canonical" href="https://nassim-sai.github.io/">
 <meta name="author" content="Nassim Sai">
@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#0a0e13">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nassim-sai.github.io/">
-<meta property="og:title" content="Nassim Sai — Network &amp; Security Engineer">
+<meta property="og:title" content="Nassim Sai · Network &amp; Security Engineer">
 <meta property="og:description" content="Kubernetes/OpenShift security observability, SOC build-out and secure network architecture. Projects, CV and certifications.">
 <meta property="og:image" content="https://nassim-sai.github.io/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="ar_TN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nassim Sai — Network &amp; Security Engineer">
+<meta name="twitter:title" content="Nassim Sai · Network &amp; Security Engineer">
 <meta name="twitter:description" content="Kubernetes/OpenShift security observability, SOC build-out and secure network architecture.">
 <meta name="twitter:image" content="https://nassim-sai.github.io/assets/og.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -46,7 +46,8 @@
   html[lang="ar"] body{font-family:'Noto Kufi Arabic','Inter',sans-serif}
   html[dir="rtl"] .row{direction:rtl}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:74px;overflow-x:clip}
+  html{scroll-behavior:smooth;scroll-padding-top:74px;overflow-x:clip;
+    -webkit-text-size-adjust:100%;text-size-adjust:100%}
   body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
     font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
     transition:background .35s ease,color .35s ease;overflow-x:clip}
@@ -210,6 +211,17 @@
     border:1px solid var(--line-2);background:#fff;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
   .certbox .cbcap{color:var(--text-2);font-size:13.5px;text-align:center}
   .certbox .cbcap b{color:var(--text)}
+  .certbox .cbnav{position:absolute;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:50%;
+    border:1px solid var(--line-2);background:var(--card);color:var(--text);font-size:22px;line-height:1;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+  .certbox .cbnav:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
+  .certbox .cbprev{left:20px}
+  .certbox .cbnext{right:20px}
+  .certbox .cbcount{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:9px}
+  @media(max-width:620px){.certbox .cbnav{width:38px;height:38px;font-size:19px}
+    .certbox .cbprev{left:6px}.certbox .cbnext{right:6px}
+    .certbox{padding:16px}.certbox .cbcap{font-size:12.5px;line-height:1.5}
+    .certbox .cbcount{display:block;margin:3px 0 0}}
   .certbox .cbclose{position:absolute;top:20px;right:24px;width:40px;height:40px;border-radius:50%;
     border:1px solid var(--line-2);background:var(--card);color:var(--text);font-size:20px;line-height:1;
     cursor:pointer;display:flex;align-items:center;justify-content:center}
@@ -352,11 +364,11 @@
       <span class="flagtag" data-i="p1.flag">Flagship · PFE</span>
       <div class="ptop"><h3 class="ptitle" data-i="p1.title">NetworkPolicy Intelligence System (NPI)</h3><span class="pdate">Jan – May 2026</span></div>
       <div class="porg" data-i="p1.org">End-of-studies engineering project · NextStep IT × TEK-UP</div>
-      <p data-i="p1.sum">A six-layer security observability platform for OpenShift/Kubernetes. It consumes cluster-native signals — OVN ACL drop logs, live NetworkPolicy objects, time-series flow statistics — and converts them into structured findings, ranked anomalies and plain-English explanations.</p>
+      <p data-i="p1.sum">A six-layer security observability platform for OpenShift/Kubernetes. It consumes cluster-native signals (OVN ACL drop logs, live NetworkPolicy objects, time-series flow statistics) and converts them into structured findings, ranked anomalies and plain-English explanations.</p>
       <ul class="bul">
-        <li data-i="p1.b1"><b>Detection</b> — three tiers: Z-score spikes over Welford baselines, deterministic rules, and Isolation Forest for multivariate outliers.</li>
-        <li data-i="p1.b2"><b>Policy audit</b> — live NetworkPolicy objects checked against an 8-rule catalogue, scored per namespace and graded A–F.</li>
-        <li data-i="p1.b3"><b>On-cluster LLM</b> — llama3.2:3b on a dedicated tainted node, CPU-only Q4 inference, 3.8 s time-to-first-token, zero data egress.</li>
+        <li data-i="p1.b1"><b>Detection</b> in three tiers: Z-score spikes over Welford baselines, deterministic rules, and Isolation Forest for multivariate outliers.</li>
+        <li data-i="p1.b2"><b>Policy audit</b>: live NetworkPolicy objects checked against an 8-rule catalogue, scored per namespace and graded A–F.</li>
+        <li data-i="p1.b3"><b>On-cluster LLM</b>: llama3.2:3b on a dedicated tainted node, CPU-only Q4 inference, 3.8 s time-to-first-token, zero data egress.</li>
       </ul>
       <div class="tags"><span class="tag">OpenShift 4.21</span><span class="tag">OVN-Kubernetes</span><span class="tag">Python 3.11</span><span class="tag">FastAPI</span><span class="tag">scikit-learn</span><span class="tag">Ollama</span><span class="tag">TimescaleDB</span><span class="tag">React 18</span><span class="tag">Loki</span><span class="tag">Grafana</span><span class="tag">Kyverno</span></div>
       <div class="plink"><a href="https://github.com/nassim-sai/netpol-intelligence" target="_blank" rel="noopener">→ github.com/nassim-sai/netpol-intelligence</a></div>
@@ -365,7 +377,7 @@
     <article class="proj rv" data-c="net">
       <div class="ptop"><h3 class="ptitle" data-i="p2.title">Secure NOC &amp; VPN Infrastructure</h3><span class="pdate">Jun – Jul 2025</span></div>
       <div class="porg" data-i="p2.org">Tunisie Telecom</div>
-      <p data-i="p2.sum">A segmented enterprise network designed to shift the defensive posture from reactive to proactive — five VLANs, redundant firewalls, encrypted site-to-site tunnels, and a supervised NOC on top.</p>
+      <p data-i="p2.sum">A segmented enterprise network designed to shift the defensive posture from reactive to proactive: five VLANs, redundant firewalls, encrypted site-to-site tunnels, and a supervised NOC on top.</p>
       <ul class="bul">
         <li data-i="p2.b1">5-VLAN segmentation (DMZ, Management/NOC, Staff, HR, IT) behind an HA pfSense firewall pair.</li>
         <li data-i="p2.b2">Site-to-site OpenVPN tunnels linking HQ and branch office, over Core/Distribution/Access switching layers.</li>
@@ -378,7 +390,7 @@
     <article class="proj rv" data-c="net">
       <div class="ptop"><h3 class="ptitle" data-i="p3.title">Network Operations Center</h3><span class="pdate">Oct – Dec 2025</span></div>
       <div class="porg" data-i="p3.org">Open-source NOC, built and attacked</div>
-      <p data-i="p3.sum">A complete NOC in a simulated enterprise — monitoring, security, centralised logging and incident management — using only open-source tooling across four VLANs.</p>
+      <p data-i="p3.sum">A complete NOC in a simulated enterprise (monitoring, security, centralised logging and incident management) using only open-source tooling across four VLANs.</p>
       <ul class="bul">
         <li data-i="p3.b1">pfSense for firewalling, VLAN routing, DHCP and NAT; Zabbix for performance and availability.</li>
         <li data-i="p3.b2">Wazuh for security monitoring and centralised logging, Snort for intrusion detection, GLPI for assets and ticketing.</li>
@@ -389,9 +401,9 @@
     </article>
 
     <article class="proj rv" data-c="net">
-      <div class="ptop"><h3 class="ptitle" data-i="p4.title">ISMS Security Architecture — NAC, Logging &amp; ERP Hardening</h3><span class="pdate">Oct – Dec 2025</span></div>
+      <div class="ptop"><h3 class="ptitle" data-i="p4.title">ISMS Security Architecture: NAC, Logging &amp; ERP Hardening</h3><span class="pdate">Oct – Dec 2025</span></div>
       <div class="porg" data-i="p4.org">ISO/IEC 27001-aligned</div>
-      <p data-i="p4.sum">A security architecture built around confidentiality, integrity, availability, accountability and traceability — spanning both infrastructure and business applications.</p>
+      <p data-i="p4.sum">A security architecture built around confidentiality, integrity, availability, accountability and traceability, spanning both infrastructure and business applications.</p>
       <ul class="bul">
         <li data-i="p4.b1">Identity-based access control with centralised authentication via FreeRADIUS and Active Directory.</li>
         <li data-i="p4.b2">Network segmentation with firewall enforcement; centralised log collection and SIEM analysis in Wazuh.</li>
@@ -410,10 +422,10 @@
     </article>
 
     <article class="proj rv" data-c="hw">
-      <div class="ptop"><h3 class="ptitle" data-i="p6.title">BAD-USB — HID Exploitation &amp; USB Hardening</h3><span class="pdate">Feb – Mar 2024</span></div>
+      <div class="ptop"><h3 class="ptitle" data-i="p6.title">BAD-USB: HID Exploitation &amp; USB Hardening</h3><span class="pdate">Feb – Mar 2024</span></div>
       <div class="porg" data-i="p6.org">Open hardware + firmware · C++</div>
       <p data-i="p6.sum">USB HID keyboard emulation built to support USB hardening assessments and red-team/blue-team exercises in controlled labs. Includes firmware for ATmega32U4-class boards, a plain-text payload scripting format, and full PCB schematics.</p>
-      <p style="color:var(--muted);font-size:13.5px" data-i="p6.note">Explicitly scoped to authorised testing only — the repository documents responsible-testing and legal requirements.</p>
+      <p style="color:var(--muted);font-size:13.5px" data-i="p6.note">Explicitly scoped to authorised testing only. The repository documents responsible-testing and legal requirements.</p>
       <div class="tags"><span class="tag">C++</span><span class="tag">ATmega32U4</span><span class="tag">PCB design</span><span class="tag">USB security</span></div>
       <div class="plink"><a href="https://github.com/nassim-sai/BAD-USB" target="_blank" rel="noopener">→ github.com/nassim-sai/BAD-USB</a></div>
     </article>
@@ -423,7 +435,7 @@
 <section id="cv">
   <div class="wrap">
     <p class="kicker rv" data-i="k.cv">CV / Résumé</p>
-    <h2 class="title rv" data-i="t.cv">Pick the market and the language — each version is written for that market, not translated into it.</h2>
+    <h2 class="title rv" data-i="t.cv">Pick the market and the language: each version is written for that market, not translated into it.</h2>
 
     <div class="cvbar rv">
       <div class="cvgroup">
@@ -497,7 +509,7 @@
     <div class="row rv">
       <div class="when">2023 – 2026</div>
       <div>
-        <h3 data-i="ed1.deg">Engineering Degree — Security of Computer Systems and Networks</h3>
+        <h3 data-i="ed1.deg">Engineering Degree: Security of Computer Systems and Networks</h3>
         <div class="where">TEK-UP University of Digital Sciences · Tunis</div>
         <p data-i="ed1.desc">Computer and Information Systems Security / Information Assurance. End-of-studies engineering project completed at NextStep IT.</p>
       </div>
@@ -505,9 +517,9 @@
     <div class="row rv">
       <div class="when">2020 – 2023</div>
       <div>
-        <h3 data-i="ed2.deg">Bachelor's Degree — Electronics, Electrical Engineering &amp; Automation</h3>
+        <h3 data-i="ed2.deg">Bachelor's Degree: Electronics, Electrical Engineering &amp; Automation</h3>
         <div class="where">ISIMM · Monastir</div>
-        <p data-i="ed2.desc">Foundation in electronics, embedded systems and automation — the base for later hardware and IoT work.</p>
+        <p data-i="ed2.desc">Foundation in electronics, embedded systems and automation: the base for later hardware and IoT work.</p>
       </div>
     </div>
   </div>
@@ -537,57 +549,62 @@
 <section id="certifications">
   <div class="wrap">
     <p class="kicker rv" data-i="k.certs">Certifications &amp; training</p>
-    <h2 class="title rv" data-i="t.certs">Ten credentials earned this month — Fortinet NSE 1–3 and the Cisco networking track.</h2>
+    <h2 class="title rv" data-i="t.certs">Eleven credentials earned this month: Fortinet NSE 1–3 and the Cisco networking track.</h2>
     <div class="badges">
       <a class="badge rv" href="https://www.credly.com/badges/c99eec57-254c-4f97-b1af-7c7966c9c83d/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="NSE 3 Certified in Cybersecurity — verify on Credly">
+         title="Verify on Credly" aria-label="Verify NSE 3 Certified in Cybersecurity on Credly">
         <img src="assets/badges/fortinet-nse-3.webp" alt="NSE 3 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">NSE 3 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/874235eb-3967-4b94-b0c7-38fa05a08177/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="NSE 2 Certified in Cybersecurity — verify on Credly">
+         title="Verify on Credly" aria-label="Verify NSE 2 Certified in Cybersecurity on Credly">
         <img src="assets/badges/fortinet-nse-2.webp" alt="NSE 2 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">NSE 2 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/b790729c-2ac0-43f6-bf33-8d1c45c0d801/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="NSE 1 Certified in Cybersecurity — verify on Credly">
+         title="Verify on Credly" aria-label="Verify NSE 1 Certified in Cybersecurity on Credly">
         <img src="assets/badges/fortinet-nse-1.webp" alt="NSE 1 Certified in Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">NSE 1 Certified in Cybersecurity</span><span class="bi">Fortinet · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/52242a90-a480-4c0e-b713-5e92b7023a3c/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Networking Devices and Initial Configuration — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Networking Devices and Initial Configuration on Credly">
         <img src="assets/badges/cisco-networking-devices.webp" alt="Networking Devices and Initial Configuration badge" width="94" height="94" loading="lazy">
         <span class="bn">Networking Devices &amp; Initial Configuration</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/db935b82-0152-480b-aae5-45f582a42b12/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Networking Basics — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Networking Basics on Credly">
         <img src="assets/badges/cisco-networking-basics.webp" alt="Networking Basics badge" width="94" height="94" loading="lazy">
         <span class="bn">Networking Basics</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/5922c5ae-3003-4563-9c46-7e1afc15a4c9/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Introduction to Cybersecurity — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Introduction to Cybersecurity on Credly">
         <img src="assets/badges/cisco-intro-cybersecurity.webp" alt="Introduction to Cybersecurity badge" width="94" height="94" loading="lazy">
         <span class="bn">Introduction to Cybersecurity</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/ea61f537-5644-45b1-8982-132013b915d4/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Endpoint Security — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Endpoint Security on Credly">
         <img src="assets/badges/cisco-endpoint-security.webp" alt="Endpoint Security badge" width="94" height="94" loading="lazy">
         <span class="bn">Endpoint Security</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/cb25a0b4-64ae-4c11-b555-f712a58e539c/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Network Defense — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Network Defense on Credly">
         <img src="assets/badges/cisco-network-defense.webp" alt="Network Defense badge" width="94" height="94" loading="lazy">
         <span class="bn">Network Defense</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/b501b155-b15d-43d0-b6e9-7688426d4dc5/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Cyber Threat Management — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Cyber Threat Management on Credly">
         <img src="assets/badges/cisco-cyber-threat-management.webp" alt="Cyber Threat Management badge" width="94" height="94" loading="lazy">
         <span class="bn">Cyber Threat Management</span><span class="bi">Cisco NetAcad · Aug 2026</span>
       </a>
       <a class="badge rv" href="https://www.credly.com/badges/f0a001f9-6188-4fa0-a05a-1f23519ca3bc/public_url" target="_blank" rel="noopener"
-         title="Verify on Credly" aria-label="Junior Cybersecurity Analyst Career Path — verify on Credly">
+         title="Verify on Credly" aria-label="Verify Junior Cybersecurity Analyst Career Path on Credly">
         <img src="assets/badges/cisco-junior-cybersecurity-analyst.webp" alt="Junior Cybersecurity Analyst Career Path badge" width="94" height="94" loading="lazy">
         <span class="bn">Junior Cybersecurity Analyst Career Path</span><span class="bi">Cisco NetAcad · Aug 2026</span>
+      </a>
+      <a class="badge rv" href="https://www.credly.com/badges/831dfc64-eb0e-439e-91a3-0c997ac7ee89/public_url" target="_blank" rel="noopener"
+         title="Verify on Credly" aria-label="Verify Cybersecurity Defense Analyst Career Path on Credly">
+        <img src="assets/badges/cisco-defense-analyst.webp" alt="Cybersecurity Defense Analyst Career Path badge" width="94" height="94" loading="lazy">
+        <span class="bn">Cybersecurity Defense Analyst Career Path</span><span class="bi">Cisco × Splunk · Sep 2026</span>
       </a>
     </div>
 
@@ -633,6 +650,10 @@
         <img src="assets/certs/cisco-junior-cybersecurity-analyst.webp" alt="Junior Cybersecurity Analyst Career Path certificate" loading="lazy">
         <div class="cx"><div class="cn2">Junior Cybersecurity Analyst Career Path</div><div class="ci2">Cisco NetAcad · Aug 2026</div></div>
       </button>
+      <button type="button" class="certtile rv" data-full="assets/certs/cisco-defense-analyst.webp" data-name="Cybersecurity Defense Analyst Career Path" data-issuer="Cisco × Splunk · Sep 2026">
+        <img src="assets/certs/cisco-defense-analyst.webp" alt="Cybersecurity Defense Analyst Career Path certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Cybersecurity Defense Analyst Career Path</div><div class="ci2">Cisco × Splunk · Sep 2026</div></div>
+      </button>
       <button type="button" class="certtile rv" data-full="assets/certs/llm-security-cllmsp.webp" data-name="Certified LLM Security Professional (CLLMSP)" data-issuer="Red Team Leaders · exam-verified · Aug 2026">
         <img src="assets/certs/llm-security-cllmsp.webp" alt="Certified LLM Security Professional (CLLMSP) certificate" loading="lazy">
         <div class="cx"><div class="cn2">Certified LLM Security Professional (CLLMSP)</div><div class="ci2">Red Team Leaders · exam-verified · Aug 2026</div></div>
@@ -641,38 +662,40 @@
         <img src="assets/certs/aws-prompt-engineering.webp" alt="Foundations of Prompt Engineering certificate" loading="lazy">
         <div class="cx"><div class="cn2">Foundations of Prompt Engineering</div><div class="ci2">AWS Training &amp; Certification · Aug 2026</div></div>
       </button>
-      <button type="button" class="certtile rv" data-full="assets/certs/paloalto-cortex-cloud.webp" data-name="Cortex Cloud — Cloud Security Professional" data-issuer="Palo Alto Networks · 4 modules, 5h · Aug 2026">
-        <img src="assets/certs/paloalto-cortex-cloud.webp" alt="Cortex Cloud — Cloud Security Professional certificate" loading="lazy">
-        <div class="cx"><div class="cn2">Cortex Cloud — Cloud Security Professional</div><div class="ci2">Palo Alto Networks · 4 modules, 5h · Aug 2026</div></div>
+      <button type="button" class="certtile rv" data-full="assets/certs/paloalto-cortex-cloud.webp" data-name="Cortex Cloud: Cloud Security Professional" data-issuer="Palo Alto Networks · 4 modules, 5h · Aug 2026">
+        <img src="assets/certs/paloalto-cortex-cloud.webp" alt="Cortex Cloud: Cloud Security Professional certificate" loading="lazy">
+        <div class="cx"><div class="cn2">Cortex Cloud: Cloud Security Professional</div><div class="ci2">Palo Alto Networks · 4 modules, 5h · Aug 2026</div></div>
       </button>
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="certbox" id="certBox" role="dialog" aria-modal="true" aria-label="Certificate preview">
       <button type="button" class="cbclose" id="certClose" aria-label="Close">&times;</button>
+      <button type="button" class="cbnav cbprev" id="certPrev" aria-label="Previous certificate">&lsaquo;</button>
+      <button type="button" class="cbnav cbnext" id="certNext" aria-label="Next certificate">&rsaquo;</button>
       <div class="cbwrap">
         <img id="certImg" src="" alt="">
-        <div class="cbcap"><b id="certCapName"></b> — <span id="certCapIssuer"></span></div>
+        <div class="cbcap"><b id="certCapName"></b> · <span id="certCapIssuer"></span><span class="cbcount" id="certCapCount"></span></div>
       </div>
     </div>
 
     <p class="kicker rv" data-i="k.next">In progress and planned</p>
     <div class="grid3">
       <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">CCNA</div><div class="ci" data-i="c.ccna">Cisco · current focus</div></div>
-      <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">Cisco CyberOps Associate</div><div class="ci" data-i="c.cyops">Junior Cybersecurity Analyst path complete — certification exam next</div></div>
-      <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">SC-900</div><div class="ci" data-i="c.sc900">Microsoft Security, Compliance &amp; Identity Fundamentals — 5 Microsoft Learn modules done</div></div>
+      <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">Cisco CyberOps Associate</div><div class="ci" data-i="c.cyops">Junior Cybersecurity Analyst &amp; Cybersecurity Defense Analyst paths complete, certification exam next</div></div>
+      <div class="cert rv"><span class="pill prog" data-i="pill.prog">In progress</span><div class="cn">SC-900</div><div class="ci" data-i="c.sc900">Microsoft Security, Compliance &amp; Identity Fundamentals, 5 Microsoft Learn modules done</div></div>
       <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">SC-200 · SC-300 · SC-500</div><div class="ci" data-i="c.sc">Microsoft Security, Compliance &amp; Identity</div></div>
       <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">RHCSA / RHCE</div><div class="ci" data-i="c.rh">Red Hat · Linux administration</div></div>
       <div class="cert rv"><span class="pill next" data-i="pill.next">Planned</span><div class="cn">ISO/IEC 27001 Foundation</div><div class="ci" data-i="c.iso">Information Security Management</div></div>
     </div>
-    <p class="rv" style="color:var(--muted);font-size:14px;margin-top:22px" data-i="community">Community: <b style="color:var(--text)">Securinets TEK-UP</b> — active member since 2024. Formerly IEEE ISIMM and CPU Club ISIMM.</p>
+    <p class="rv" style="color:var(--muted);font-size:14px;margin-top:22px" data-i="community">Community: <b style="color:var(--text)">Securinets TEK-UP</b>, active member since 2024. Formerly IEEE ISIMM and CPU Club ISIMM.</p>
   </div>
 </section>
 
 <section id="contact" style="border-bottom:none">
   <div class="wrap">
     <p class="kicker rv" data-i="k.contact">Contact</p>
-    <h2 class="title rv" data-i="t.contact">Seeking a Network &amp; Security Engineer role — on-site in Tunisia or remote.</h2>
+    <h2 class="title rv" data-i="t.contact">Seeking a Network &amp; Security Engineer role, on-site in Tunisia or remote.</h2>
     <div class="grid3">
       <div class="cbox rv"><div class="lbl" data-i="l.email">Email</div><a href="mailto:saynassim12@gmail.com">saynassim12@gmail.com</a></div>
       <div class="cbox rv"><div class="lbl" data-i="l.phone">Phone</div><a href="tel:+21655870738">+216 55 870 738</a></div>
@@ -707,7 +730,7 @@ var ROLES = {
 var FR = {
 "skip":"Aller au contenu principal",
 "nav.cv":"CV",
-"k.cv":"CV / Résumé","t.cv":"Choisissez le marché et la langue — chaque version est écrite pour ce marché, pas traduite vers lui.",
+"k.cv":"CV / Résumé","t.cv":"Choisissez le marché et la langue : chaque version est écrite pour ce marché, pas traduite vers lui.",
 "cv.region":"Région","cv.language":"Langue",
 "cv.tn":"Tunisie","cv.eu":"Europe","cv.gulf":"GCC","cv.ca":"Canada","cv.us":"États-Unis",
 "cv.fr":"Français","cv.ar":"Arabe",
@@ -724,30 +747,30 @@ var FR = {
 "p1.flag":"Projet phare · PFE",
 "p1.title":"NetworkPolicy Intelligence System (NPI)",
 "p1.org":"Projet de fin d'études · NextStep IT × TEK-UP",
-"p1.sum":"Une plateforme d'observabilité de sécurité à six couches pour OpenShift/Kubernetes. Elle consomme les signaux natifs du cluster — journaux de rejet OVN ACL, objets NetworkPolicy en direct, statistiques de flux temporelles — et les convertit en constats structurés, anomalies classées et explications en langage clair.",
-"p1.b1":"<b>Détection</b> — trois niveaux : pics Z-score sur des lignes de base Welford, règles déterministes et Isolation Forest pour les valeurs aberrantes multivariées.",
-"p1.b2":"<b>Audit de politiques</b> — les objets NetworkPolicy en direct sont vérifiés contre un catalogue de 8 règles, notés par namespace et classés de A à F.",
-"p1.b3":"<b>LLM dans le cluster</b> — llama3.2:3b sur un nœud dédié, inférence Q4 uniquement CPU, 3,8 s avant le premier token, aucune sortie de données.",
+"p1.sum":"Une plateforme d'observabilité de sécurité à six couches pour OpenShift/Kubernetes. Elle consomme les signaux natifs du cluster (journaux de rejet OVN ACL, objets NetworkPolicy en direct, statistiques de flux temporelles) et les convertit en constats structurés, anomalies classées et explications en langage clair.",
+"p1.b1":"<b>Détection</b> sur trois niveaux : pics Z-score sur des lignes de base Welford, règles déterministes et Isolation Forest pour les valeurs aberrantes multivariées.",
+"p1.b2":"<b>Audit de politiques</b> : les objets NetworkPolicy en direct sont vérifiés contre un catalogue de 8 règles, notés par namespace et classés de A à F.",
+"p1.b3":"<b>LLM dans le cluster</b> : llama3.2:3b sur un nœud dédié, inférence Q4 uniquement CPU, 3,8 s avant le premier token, aucune sortie de données.",
 "p2.title":"Infrastructure NOC & VPN sécurisée","p2.org":"Tunisie Telecom",
-"p2.sum":"Un réseau d'entreprise segmenté conçu pour faire passer la posture défensive du réactif au proactif — cinq VLAN, pare-feux redondants, tunnels site-à-site chiffrés et un NOC supervisé au-dessus.",
+"p2.sum":"Un réseau d'entreprise segmenté conçu pour faire passer la posture défensive du réactif au proactif : cinq VLAN, pare-feux redondants, tunnels site-à-site chiffrés et un NOC supervisé au-dessus.",
 "p2.b1":"Segmentation en 5 VLAN (DMZ, Management/NOC, Personnel, RH, IT) derrière une paire de pare-feux pfSense en haute disponibilité.",
 "p2.b2":"Tunnels OpenVPN site-à-site reliant le siège et l'agence, sur des couches de commutation Cœur/Distribution/Accès.",
 "p2.b3":"Tableau de bord NOC Zabbix supervisant plus de 12 hôtes, avec un IDS Suricata alimentant une pile de corrélation ELK.",
 "p3.title":"Centre d'opérations réseau (NOC)","p3.org":"NOC open source, construit puis attaqué",
-"p3.sum":"Un NOC complet dans un environnement d'entreprise simulé — supervision, sécurité, journalisation centralisée et gestion des incidents — uniquement avec des outils open source répartis sur quatre VLAN.",
+"p3.sum":"Un NOC complet dans un environnement d'entreprise simulé (supervision, sécurité, journalisation centralisée et gestion des incidents) uniquement avec des outils open source répartis sur quatre VLAN.",
 "p3.b1":"pfSense pour le pare-feu, le routage VLAN, le DHCP et le NAT ; Zabbix pour la performance et la disponibilité.",
 "p3.b2":"Wazuh pour la supervision de sécurité et la journalisation centralisée, Snort pour la détection d'intrusion, GLPI pour les actifs et la billetterie.",
 "p3.b3":"Validé par l'attaque : scans de ports et inondations ICMP ont confirmé les alertes Snort, la capture des journaux Wazuh et le cycle de vie complet des tickets GLPI.",
-"p4.title":"Architecture de sécurité SMSI — NAC, journalisation & durcissement ERP","p4.org":"Aligné ISO/IEC 27001",
-"p4.sum":"Une architecture de sécurité fondée sur la confidentialité, l'intégrité, la disponibilité, la responsabilité et la traçabilité — couvrant à la fois l'infrastructure et les applications métier.",
+"p4.title":"Architecture de sécurité SMSI : NAC, journalisation & durcissement ERP","p4.org":"Aligné ISO/IEC 27001",
+"p4.sum":"Une architecture de sécurité fondée sur la confidentialité, l'intégrité, la disponibilité, la responsabilité et la traçabilité, couvrant à la fois l'infrastructure et les applications métier.",
 "p4.b1":"Contrôle d'accès basé sur l'identité avec authentification centralisée via FreeRADIUS et Active Directory.",
 "p4.b2":"Segmentation réseau avec application par pare-feu ; collecte centralisée des journaux et analyse SIEM dans Wazuh.",
 "p4.b3":"Durcissement de l'ERP Odoo : déploiement Docker sécurisé, authentification forte, isolation réseau, supervision continue.",
 "p5.title":"Routeur portable sécurisé","p5.org":"Appliance de sécurité réseau sur Raspberry Pi",
 "p5.sum":"Une appliance défensive de poche pour les réseaux non fiables : OpenWRT comme base de routage et de pare-feu, Pi-hole pour le filtrage DNS, un pot de miel Cowrie pour inspecter le trafic des attaquants, et OpenVPN pour le tunnel chiffré.",
-"p6.title":"BAD-USB — Exploitation HID & durcissement USB","p6.org":"Matériel et firmware ouverts · C++",
+"p6.title":"BAD-USB : Exploitation HID & durcissement USB","p6.org":"Matériel et firmware ouverts · C++",
 "p6.sum":"Émulation de clavier USB HID conçue pour soutenir les évaluations de durcissement USB et les exercices red team / blue team en laboratoire contrôlé. Comprend le firmware pour cartes ATmega32U4, un format de script de charge en texte brut et les schémas PCB complets.",
-"p6.note":"Strictement limité aux tests autorisés — le dépôt documente les exigences légales et de test responsable.",
+"p6.note":"Strictement limité aux tests autorisés. Le dépôt documente les exigences légales et de test responsable.",
 "k.exp":"Expérience","t.exp":"Où le travail a été fait.",
 "e1.role":"Stagiaire Ingénieur Réseaux & Sécurité (PFE)",
 "e1.desc":"Conception et réalisation du NetworkPolicy Intelligence System, une plateforme d'observabilité de sécurité pour clusters OpenShift/Kubernetes, comme projet de fin d'études en partenariat avec TEK-UP University.",
@@ -756,17 +779,17 @@ var FR = {
 "e3.role":"Stagiaire Systèmes IoT",
 "e3.desc":"Développement d'une solution IoT temps réel pour la supervision et la traçabilité du pesage industriel, sur Raspberry Pi avec modules cellulaires SIM808 et la plateforme ThingsBoard.",
 "k.edu":"Formation","t.edu":"Deux diplômes, une seule direction.",
-"ed1.deg":"Diplôme d'Ingénieur — Sécurité des Systèmes Informatiques et des Réseaux",
+"ed1.deg":"Diplôme d'Ingénieur : Sécurité des Systèmes Informatiques et des Réseaux",
 "ed1.desc":"Sécurité des systèmes d'information / assurance de l'information. Projet de fin d'études réalisé chez NextStep IT.",
-"ed2.deg":"Licence — Électronique, Électrotechnique & Automatique",
-"ed2.desc":"Bases en électronique, systèmes embarqués et automatisme — le socle des travaux ultérieurs en matériel et IoT.",
+"ed2.deg":"Licence : Électronique, Électrotechnique & Automatique",
+"ed2.desc":"Bases en électronique, systèmes embarqués et automatisme : le socle des travaux ultérieurs en matériel et IoT.",
 "k.skills":"Compétences techniques","t.skills":"Ce que j'utilise au quotidien.",
 "s1":"Sécurité & architecture réseau","s2":"Opérations de sécurité & détection","s3":"Cloud natif & conteneurs","s4":"Programmation & données","s5":"Systèmes","s6":"Gouvernance & outils",
-"k.certs":"Certifications & formations","k.fullcerts":"Certificats complets","t.certs":"Dix certifications obtenues ce mois-ci — Fortinet NSE 1–3 et le parcours réseau Cisco.","k.next":"En cours et prévu",
+"k.certs":"Certifications & formations","k.fullcerts":"Certificats complets","t.certs":"Onze certifications obtenues ce mois-ci : Fortinet NSE 1–3 et le parcours réseau Cisco.","k.next":"En cours et prévu",
 "pill.prog":"En cours","pill.next":"Prévu",
-"c.ccna":"Cisco · priorité actuelle","c.cyops":"Parcours Junior Cybersecurity Analyst terminé — examen de certification à suivre","c.sc900":"Bases Microsoft Sécurité, Conformité & Identité — 5 modules Microsoft Learn terminés","c.sc":"Microsoft Sécurité, Conformité & Identité","c.rh":"Red Hat · administration Linux","c.iso":"Management de la sécurité de l'information",
-"community":"Communauté : <b style=\"color:var(--text)\">Securinets TEK-UP</b> — membre actif depuis 2024. Anciennement IEEE ISIMM et CPU Club ISIMM.",
-"k.contact":"Contact","t.contact":"À la recherche d'un poste d'Ingénieur Réseaux & Sécurité — en Tunisie ou à distance.",
+"c.ccna":"Cisco · priorité actuelle","c.cyops":"Parcours Junior Cybersecurity Analyst et Cybersecurity Defense Analyst terminés, examen de certification à suivre","c.sc900":"Bases Microsoft Sécurité, Conformité & Identité, 5 modules Microsoft Learn terminés","c.sc":"Microsoft Sécurité, Conformité & Identité","c.rh":"Red Hat · administration Linux","c.iso":"Management de la sécurité de l'information",
+"community":"Communauté : <b style=\"color:var(--text)\">Securinets TEK-UP</b>, membre actif depuis 2024. Anciennement IEEE ISIMM et CPU Club ISIMM.",
+"k.contact":"Contact","t.contact":"À la recherche d'un poste d'Ingénieur Réseaux & Sécurité, en Tunisie ou à distance.",
 "l.email":"E-mail","l.phone":"Téléphone","l.credly":"Badges vérifiés",
 "updated":"Mis à jour en août 2026"
 };
@@ -774,7 +797,7 @@ var FR = {
 var AR = {
 "skip":"تخطَّ إلى المحتوى الرئيسي",
 "nav.cv":"السيرة الذاتية",
-"k.cv":"السيرة الذاتية","t.cv":"اختر السوق واللغة — كل نسخة مكتوبة لهذا السوق، لا مترجمة إليه.",
+"k.cv":"السيرة الذاتية","t.cv":"اختر السوق واللغة: كل نسخة مكتوبة لهذا السوق، لا مترجمة إليه.",
 "cv.region":"المنطقة","cv.language":"اللغة",
 "cv.tn":"تونس","cv.eu":"أوروبا","cv.gulf":"GCC","cv.ca":"كندا","cv.us":"الولايات المتحدة",
 "cv.fr":"الفرنسية","cv.ar":"العربية",
@@ -791,30 +814,30 @@ var AR = {
 "p1.flag":"المشروع الرئيسي · مشروع التخرج",
 "p1.title":"نظام NetworkPolicy Intelligence (NPI)",
 "p1.org":"مشروع التخرج الهندسي · NextStep IT × TEK-UP",
-"p1.sum":"منصة رصد أمني من ست طبقات لـ OpenShift/Kubernetes. تستهلك الإشارات الأصلية للعنقود — سجلات رفض OVN ACL، وكائنات NetworkPolicy الحيّة، وإحصاءات التدفّق الزمنية — وتحوّلها إلى نتائج منظّمة، وشذوذات مرتّبة، وشروحات بلغة واضحة.",
-"p1.b1":"<b>الكشف</b> — ثلاث مستويات: قفزات Z-score فوق خطوط أساس Welford، وقواعد حتمية، و Isolation Forest للقيم الشاذة متعددة المتغيرات.",
-"p1.b2":"<b>تدقيق السياسات</b> — فحص كائنات NetworkPolicy الحيّة مقابل كتالوج من 8 قواعد، مع تقييم لكل namespace وتصنيف من A إلى F.",
-"p1.b3":"<b>نموذج لغوي داخل العنقود</b> — llama3.2:3b على عقدة مخصّصة، استدلال Q4 بالمعالج فقط، 3.8 ثانية حتى أول رمز، وبدون أي خروج للبيانات.",
+"p1.sum":"منصة رصد أمني من ست طبقات لـ OpenShift/Kubernetes. تستهلك الإشارات الأصلية للعنقود (سجلات رفض OVN ACL، وكائنات NetworkPolicy الحيّة، وإحصاءات التدفّق الزمنية) وتحوّلها إلى نتائج منظّمة، وشذوذات مرتّبة، وشروحات بلغة واضحة.",
+"p1.b1":"<b>الكشف</b> على ثلاث مستويات: قفزات Z-score فوق خطوط أساس Welford، وقواعد حتمية، و Isolation Forest للقيم الشاذة متعددة المتغيرات.",
+"p1.b2":"<b>تدقيق السياسات</b>: فحص كائنات NetworkPolicy الحيّة مقابل كتالوج من 8 قواعد، مع تقييم لكل namespace وتصنيف من A إلى F.",
+"p1.b3":"<b>نموذج لغوي داخل العنقود</b>: llama3.2:3b على عقدة مخصّصة، استدلال Q4 بالمعالج فقط، 3.8 ثانية حتى أول رمز، وبدون أي خروج للبيانات.",
 "p2.title":"بنية NOC و VPN آمنة","p2.org":"اتصالات تونس",
-"p2.sum":"شبكة مؤسسية مجزّأة صُمّمت لنقل الموقف الدفاعي من رد الفعل إلى الاستباق — خمسة VLAN، جدران نارية مكرّرة، أنفاق مشفّرة بين المواقع، ومركز عمليات شبكة يشرف على الجميع.",
+"p2.sum":"شبكة مؤسسية مجزّأة صُمّمت لنقل الموقف الدفاعي من رد الفعل إلى الاستباق: خمسة VLAN، جدران نارية مكرّرة، أنفاق مشفّرة بين المواقع، ومركز عمليات شبكة يشرف على الجميع.",
 "p2.b1":"تجزئة إلى 5 شبكات VLAN (DMZ، الإدارة/NOC، الموظفون، الموارد البشرية، تقنية المعلومات) خلف زوج جدران نارية pfSense عالي التوفّر.",
 "p2.b2":"أنفاق OpenVPN بين المقر والفرع، فوق طبقات تبديل النواة والتوزيع والوصول.",
 "p2.b3":"لوحة NOC على Zabbix تراقب أكثر من 12 مضيفًا، مع نظام كشف تسلل Suricata يغذّي منظومة ارتباط ELK.",
 "p3.title":"مركز عمليات الشبكة (NOC)","p3.org":"مركز مفتوح المصدر، بُني ثم هُوجم",
-"p3.sum":"مركز عمليات شبكة متكامل في بيئة مؤسسية محاكاة — مراقبة وأمن وتسجيل مركزي وإدارة حوادث — بأدوات مفتوحة المصدر فقط موزّعة على أربع شبكات VLAN.",
+"p3.sum":"مركز عمليات شبكة متكامل في بيئة مؤسسية محاكاة (مراقبة وأمن وتسجيل مركزي وإدارة حوادث) بأدوات مفتوحة المصدر فقط موزّعة على أربع شبكات VLAN.",
 "p3.b1":"pfSense للجدار الناري وتوجيه VLAN و DHCP و NAT؛ و Zabbix للأداء والتوفّر.",
 "p3.b2":"Wazuh للمراقبة الأمنية والتسجيل المركزي، و Snort لكشف التسلل، و GLPI لإدارة الأصول والتذاكر.",
 "p3.b3":"التحقّق بالهجوم: مسح المنافذ وإغراق ICMP أكّدا تنبيهات Snort، والتقاط سجلات Wazuh، ودورة حياة التذاكر الكاملة في GLPI.",
-"p4.title":"بنية أمن نظام إدارة أمن المعلومات — NAC والتسجيل وتحصين ERP","p4.org":"متوافق مع ISO/IEC 27001",
-"p4.sum":"بنية أمنية قائمة على السرّية والسلامة والتوفّر والمساءلة وقابلية التتبّع — تغطي البنية التحتية وتطبيقات الأعمال معًا.",
+"p4.title":"بنية أمن نظام إدارة أمن المعلومات: NAC والتسجيل وتحصين ERP","p4.org":"متوافق مع ISO/IEC 27001",
+"p4.sum":"بنية أمنية قائمة على السرّية والسلامة والتوفّر والمساءلة وقابلية التتبّع، تغطي البنية التحتية وتطبيقات الأعمال معًا.",
 "p4.b1":"تحكّم في الوصول قائم على الهوية مع مصادقة مركزية عبر FreeRADIUS و Active Directory.",
 "p4.b2":"تجزئة الشبكة مع فرض عبر الجدار الناري؛ وجمع مركزي للسجلات وتحليل SIEM في Wazuh.",
 "p4.b3":"تحصين نظام Odoo: نشر آمن عبر Docker، ومصادقة قوية، وعزل شبكي، ومراقبة مستمرة.",
 "p5.title":"موجّه محمول آمن","p5.org":"جهاز أمن شبكي على Raspberry Pi",
 "p5.sum":"جهاز دفاعي بحجم الجيب للشبكات غير الموثوقة: OpenWRT كأساس للتوجيه والجدار الناري، و Pi-hole لتصفية DNS، ومصيدة Cowrie لفحص حركة المهاجمين، و OpenVPN للنفق المشفّر.",
-"p6.title":"BAD-USB — استغلال HID وتحصين USB","p6.org":"عتاد وبرمجيات ثابتة مفتوحة · C++",
+"p6.title":"BAD-USB: استغلال HID وتحصين USB","p6.org":"عتاد وبرمجيات ثابتة مفتوحة · C++",
 "p6.sum":"محاكاة لوحة مفاتيح USB HID بُنيت لدعم تقييمات تحصين USB وتمارين الفريقين الأحمر والأزرق في مختبرات مضبوطة. تتضمّن البرمجية الثابتة للوحات ATmega32U4، وصيغة نصّية لكتابة الحمولات، ومخططات PCB كاملة.",
-"p6.note":"مقصور صراحةً على الاختبار المصرّح به — يوثّق المستودع متطلّبات الاختبار المسؤول والقانونية.",
+"p6.note":"مقصور صراحةً على الاختبار المصرّح به. يوثّق المستودع متطلّبات الاختبار المسؤول والقانونية.",
 "k.exp":"الخبرة المهنية","t.exp":"أين أُنجز العمل.",
 "e1.role":"متربّص مهندس شبكات وأمن (مشروع التخرج)",
 "e1.desc":"تصميم وبناء نظام NetworkPolicy Intelligence، وهو منصة رصد أمني لعناقيد OpenShift/Kubernetes، كمشروع تخرّج هندسي بالشراكة مع جامعة TEK-UP.",
@@ -823,17 +846,17 @@ var AR = {
 "e3.role":"متربّص أنظمة إنترنت الأشياء",
 "e3.desc":"تطوير حل إنترنت أشياء آني لمراقبة وتتبّع الوزن الصناعي، باستخدام Raspberry Pi ووحدات SIM808 الخلوية ومنصة ThingsBoard.",
 "k.edu":"التعليم","t.edu":"شهادتان، واتجاه واحد.",
-"ed1.deg":"شهادة مهندس — أمن النظم المعلوماتية والشبكات",
+"ed1.deg":"شهادة مهندس: أمن النظم المعلوماتية والشبكات",
 "ed1.desc":"أمن نظم المعلومات وضمان المعلومات. أُنجز مشروع التخرّج الهندسي في NextStep IT.",
-"ed2.deg":"الإجازة — إلكترونيك وكهرباء وآليات",
-"ed2.desc":"أساس في الإلكترونيات والأنظمة المدمجة والأتمتة — القاعدة التي بُنيت عليها أعمال العتاد وإنترنت الأشياء لاحقًا.",
+"ed2.deg":"الإجازة: إلكترونيك وكهرباء وآليات",
+"ed2.desc":"أساس في الإلكترونيات والأنظمة المدمجة والأتمتة: القاعدة التي بُنيت عليها أعمال العتاد وإنترنت الأشياء لاحقًا.",
 "k.skills":"المهارات التقنية","t.skills":"ما أعتمد عليه.",
 "s1":"أمن الشبكات والبنية","s2":"عمليات الأمن والكشف","s3":"السحابة الأصلية والحاويات","s4":"البرمجة والبيانات","s5":"الأنظمة","s6":"الحوكمة والأدوات",
-"k.certs":"الشهادات والتكوين","k.fullcerts":"الشهادات كاملةً","t.certs":"عشر شهادات حُصّلت هذا الشهر — Fortinet NSE 1–3 ومسار الشبكات من Cisco.","k.next":"قيد الإنجاز ومخطَّط",
+"k.certs":"الشهادات والتكوين","k.fullcerts":"الشهادات كاملةً","t.certs":"إحدى عشرة شهادة حُصّلت هذا الشهر: Fortinet NSE 1–3 ومسار الشبكات من Cisco.","k.next":"قيد الإنجاز ومخطَّط",
 "pill.prog":"قيد الإنجاز","pill.next":"مخطّطة",
-"c.ccna":"Cisco · الأولوية الحالية","c.cyops":"إكمال مسار Junior Cybersecurity Analyst — امتحان الشهادة القادم","c.sc900":"أساسيات مايكروسوفت للأمن والامتثال والهوية — 5 وحدات من Microsoft Learn منجزة","c.sc":"مايكروسوفت — الأمن والامتثال والهوية","c.rh":"Red Hat · إدارة أنظمة لينكس","c.iso":"إدارة أمن المعلومات",
-"community":"المجتمع: <b style=\"color:var(--text)\">Securinets TEK-UP</b> — عضو نشط منذ 2024. وسابقًا IEEE ISIMM و CPU Club ISIMM.",
-"k.contact":"التواصل","t.contact":"أبحث عن منصب مهندس شبكات وأمن — داخل تونس أو عن بُعد.",
+"c.ccna":"Cisco · الأولوية الحالية","c.cyops":"إكمال مساري Junior Cybersecurity Analyst و Cybersecurity Defense Analyst، امتحان الشهادة القادم","c.sc900":"أساسيات مايكروسوفت للأمن والامتثال والهوية، 5 وحدات من Microsoft Learn منجزة","c.sc":"مايكروسوفت: الأمن والامتثال والهوية","c.rh":"Red Hat · إدارة أنظمة لينكس","c.iso":"إدارة أمن المعلومات",
+"community":"المجتمع: <b style=\"color:var(--text)\">Securinets TEK-UP</b>، عضو نشط منذ 2024. وسابقًا IEEE ISIMM و CPU Club ISIMM.",
+"k.contact":"التواصل","t.contact":"أبحث عن منصب مهندس شبكات وأمن، داخل تونس أو عن بُعد.",
 "l.email":"البريد الإلكتروني","l.phone":"الهاتف","l.credly":"الشارات الموثّقة",
 "updated":"آخر تحديث أوت 2026"
 };
@@ -860,9 +883,9 @@ function setLang(l){
   rotIdx = 0; rotChar = 0; rotDel = false;
   if(rotEl){ rotGen++; rotEl.textContent = '';
     if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) tick(rotGen); }
-  document.title = (l==='ar') ? 'نسيم ساعي — مهندس شبكات وأمن' :
-                   (l==='fr') ? 'Nassim Sai — Ingénieur Réseaux & Sécurité' :
-                                'Nassim Sai — Network & Security Engineer';
+  document.title = (l==='ar') ? 'نسيم ساعي · مهندس شبكات وأمن' :
+                   (l==='fr') ? 'Nassim Sai · Ingénieur Réseaux & Sécurité' :
+                                'Nassim Sai · Network & Security Engineer';
 }
 document.querySelectorAll('.langsw button').forEach(function(b){
   b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
@@ -1112,32 +1135,63 @@ sync();
 "use strict";
 var box = document.getElementById('certBox');
 if(!box) return;
-var img = document.getElementById('certImg');
-var capN = document.getElementById('certCapName');
-var capI = document.getElementById('certCapIssuer');
-var lastFocus = null;
-function open(tile){
-  img.src = tile.getAttribute('data-full');
-  img.alt = tile.getAttribute('data-name') + ' certificate';
-  capN.textContent = tile.getAttribute('data-name');
-  capI.textContent = tile.getAttribute('data-issuer');
-  box.classList.add('on');
+var img      = document.getElementById('certImg');
+var capN     = document.getElementById('certCapName');
+var capI     = document.getElementById('certCapIssuer');
+var capX     = document.getElementById('certCapCount');
+var closeBtn = document.getElementById('certClose');
+var prevBtn  = document.getElementById('certPrev');
+var nextBtn  = document.getElementById('certNext');
+var tiles = Array.prototype.slice.call(document.querySelectorAll('.certtile'));
+var idx = -1, lastFocus = null;
+
+/* Arabic flips the grid, so the tile sitting to the viewer's left is the one
+   *after* this in DOM order. Left always means left, whichever way we read. */
+function rtl(){ return document.documentElement.dir === 'rtl'; }
+
+function preload(i){
+  var t = tiles[(i + tiles.length) % tiles.length];
+  if(t){ var p = new Image(); p.src = t.getAttribute('data-full'); }
+}
+function paint(i){
+  var t = tiles[i];
+  if(!t) return;
+  idx = i;
+  img.src = t.getAttribute('data-full');
+  img.alt = t.getAttribute('data-name') + ' certificate';
+  capN.textContent = t.getAttribute('data-name');
+  capI.textContent = t.getAttribute('data-issuer');
+  if(capX) capX.textContent = (i + 1) + ' / ' + tiles.length;
+  preload(i + 1); preload(i - 1);
+}
+function step(d){ if(idx > -1) paint((idx + d + tiles.length) % tiles.length); }
+function open(i){
   lastFocus = document.activeElement;
-  document.getElementById('certClose').focus();
+  paint(i);
+  box.classList.add('on');
+  closeBtn.focus();
   document.body.style.overflow = 'hidden';
 }
 function close(){
   box.classList.remove('on');
-  img.src = '';
+  img.src = ''; idx = -1;
   document.body.style.overflow = '';
   if(lastFocus) lastFocus.focus();
 }
-document.querySelectorAll('.certtile').forEach(function(t){
-  t.addEventListener('click', function(){ open(t); });
-});
-document.getElementById('certClose').addEventListener('click', close);
+
+tiles.forEach(function(t, i){ t.addEventListener('click', function(){ open(i); }); });
+closeBtn.addEventListener('click', close);
+prevBtn.addEventListener('click', function(){ step(rtl() ? 1 : -1); });
+nextBtn.addEventListener('click', function(){ step(rtl() ? -1 : 1); });
 box.addEventListener('click', function(e){ if(e.target === box) close(); });
-document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && box.classList.contains('on')) close(); });
+document.addEventListener('keydown', function(e){
+  if(!box.classList.contains('on')) return;
+  if(e.key === 'Escape'){ close(); }
+  else if(e.key === 'ArrowLeft'){  e.preventDefault(); step(rtl() ?  1 : -1); }
+  else if(e.key === 'ArrowRight'){ e.preventDefault(); step(rtl() ? -1 :  1); }
+  else if(e.key === 'Home'){ e.preventDefault(); paint(0); }
+  else if(e.key === 'End'){  e.preventDefault(); paint(tiles.length - 1); }
+});
 })();
 
 (function(){
